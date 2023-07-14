@@ -1,0 +1,213 @@
+html,body
+{
+ overflow-x: hidden;
+
+}
+
+.yourfavdiv
+{
+    background-color: rgb(248, 248, 248);
+}
+.foryou
+{
+  width: 100%; /* Subtract twice the padding value (30px) from the total viewport width */
+  margin-left: 10px; /* Compensate for the negative width */
+  margin-right: -30px; /* Compensate for the negative width */
+    display: flex;
+    flex-direction: row;
+}
+.topbrands
+{
+  width: 100%; /* Subtract twice the padding value (30px) from the total viewport width */
+  margin-left: 10px; /* Compensate for the negative width */
+  margin-right: -30px; /* Compensate for the negative width */
+    display: flex;
+    flex-direction: row;
+}
+
+.frame1
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin : 20px;
+  justify-content: center;
+}
+.frame1 :hover
+{
+cursor: pointer;
+}
+.frame1 img
+{
+    border: solid;
+    border-radius: 50%;
+    box-shadow: 1px 5px 10px;
+}
+.frame2
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin : 20px;
+    justify-content: center;
+   
+}
+.frame2 img
+{
+    border: solid 1px;;
+    border-radius: 50%;;
+}
+#navend
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right : 5%;
+    top : 15px;
+    padding : 10px;
+}
+#navend h2,h2
+{
+    margin : 10px;
+    padding : 5px;
+
+}
+
+.searchbar
+{
+    width: 600px;
+    margin : 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    border: solid 2px;
+    justify-content: center;
+    align-items: center;
+
+}
+.searchbarp1,.searchbarp2
+{
+    padding  : 5px;
+    border: solid 1px;
+
+}
+.navb
+{
+    width: 100%;
+    padding : 5px;
+    display: flex;
+    flex-direction: row;
+  
+   
+}
+.navb img
+{
+    align-self: center;
+}
+header
+{
+    margin-bottom: 100px;
+    padding : 20px;
+    width: 100%;
+}
+
+.frame3
+{
+  margin : 10px;
+  padding : 10px;
+  height: 400px;
+  width: 400px;
+}
+.frame3 img
+{
+  width: 370px;
+  height: 300px;
+  border: solid 1px white;
+  border-radius: 20px 20px 20px 20px;
+}
+
+
+.frame3:hover, .frame3:hover > * {
+  background-color: rgb(225, 226, 225);
+  cursor: pointer;
+  }
+
+
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+
+.app {
+    position: relative;
+    /* Add other styles for your app */
+  }
+  
+  .dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as desired */
+    z-index: 1;
+  }
+  
+  .login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    /* Add other styles for the login form */
+  }
+  
+  .dark-overlay .frame1 img,
+  .dark-overlay .frame2 img,
+  .dark-overlay .frame3 img {
+    filter: brightness(30%); /* Adjust the brightness value to darken the images */
+  }
+
+  form{
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-evenly;
+    background-color: #ffb374;
+  }
+  form input,button
+  {
+    margin: 10px;
+
+  }
+
+
+  .filt {
+    border: 1px solid rgb(207, 207, 207);
+    color: rgb(156, 156, 156);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(54, 54, 54, 0.06) 0px 1px 2px;
+    border-radius: 0.8rem;
+    margin: 5px;
+    padding: 0.8rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    font-size: 1.4rem;
+    width: 150px;
+  }
+  #filter-chamber
+  {
+    display: flex;
+    flex-direction: row;
+  }

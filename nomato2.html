@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bannergrid">
+        <div class="bgc1">
+..
+        </div>
+        <div class="bgc2">
+
+            <div id="lowerbg">
+..
+            </div>
+            <div id="upperbg">
+..
+            </div>
+        </div>
+    </div>
+
+    <div class="lowergrid">
+        <div class="namegrid">
+            <h1>
+                Domino's Pizza
+            </h1>
+        </div>
+        <div class="ratinggrid">
+            <section id="ratingsection">
+                <div class="ratebox1">
+                    <div id="greenbox">
+                        <h3>5.0</h3>
+                        <img src="https://www.freeiconspng.com/thumbs/white-star-icon/white-star-icon-10.png" alt="*" height="15px" width="15px">
+                    </div>
+                    <div id="detailbox">
+                        <div>1</div>
+                        <div>Dining Reviews</div>
+                    </div>
+                </div>
+                <div class="ratebox2">
+                    <div id="greenbox2">
+                        <h3>4.3</h3>
+                        <img src="https://www.freeiconspng.com/thumbs/white-star-icon/white-star-icon-10.png" alt="*" height="15px" width="15px">
+                    </div>
+                    <div id="detailbox">
+                        <div>430</div>
+                        <div>Delivery Reviews</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div>
+        <h3 >Pizza, Italian, Pasta, Fast Food, Desserts</h3>
+            <h3 style="color:rgb(138, 133, 133)">Mathura Locality, Mathura</h3>
+    </div>
+
+    <div class="DBS">
+        <div id="Direct">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Google_Maps_pin.svg/1200px-Google_Maps_pin.svg.png" alt=">" height="20px" width="10px">
+            <div>. Direction</div>
+        </div>
+        <div id="book">
+           <img src="https://www.freeiconspng.com/uploads/bookmarks-icon-27.png" alt=">" height="20px" width="z0px">
+            <div>Bookmark</div>
+        </div>
+        <div id="share">
+            <img src="https://p7.hiclipart.com/preview/815/962/571/share-icon-computer-icons-icon-design-social-networking-service-download-button-thumbnail.jpg" alt=">" height="20px" width="20px">
+            <div>. Share</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    body
+    {
+        padding : 40px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+    }
+    .bannergrid
+    {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(241, 241, 241);
+        padding: 5px;
+    }
+    .bgc1
+        {
+         background-image: url('https://b.zmtcdn.com/data/pictures/chains/1/18951021/a0c3bcc09b1448a7138beda386f8db21.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*');
+         width: 60%;
+         height: 100%;
+            
+        }
+        .bgc2
+        {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+        #lowerbg
+        {
+            background-image: url('https://b.zmtcdn.com/data/reviews_photos/70a/3bb0beb4c6be2d742fba6fc2b582a70a_1682071771.jpg?output-format=webp&fit=around|300:273&crop=300:273;*,*');
+            height: 50%;
+            width: 100%;
+            margin: 5px;
+        }
+        #upperbg
+        {
+            height: 50%;
+            width: 100%;
+            margin: 5px;
+            background-color: grey;
+        }
+        .lowergrid
+        {
+            display: flex;
+            flex-direction: row;
+
+        }
+        .namegrid
+        {
+            display: flex;
+            justify-content: flex-start;
+            width: 60%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .ratinggrid
+        {
+            display: flex;
+           justify-content: flex-end;
+            width: 40%;
+        }
+
+        #ratingsection
+        {
+            display: flex;
+            flex-direction: row;
+            padding : 2px;
+           
+            width: 100%;
+            margin-left: 10px ;
+        }
+        .ratebox1
+        {   display: flex;
+            flex-direction: row;
+            padding: 2px;
+            margin:5px;
+            width: 45%;
+            height: 40px;;
+        }
+        #greenbox
+        {
+            display: flex;
+            color : white;
+            width:30%;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(64, 230, 64);
+            border: 1px rgb(64, 230, 64);
+            border-radius: 40%;
+        }
+
+        #greenbox2
+        {
+            display: flex;
+            color : white;
+            width:30%;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(41, 150, 41);
+            border: 1px rgb(41, 150, 41);
+            border-radius: 40%;
+            font : bold;
+        }
+
+        .ratebox2
+        {
+            display: flex;
+            flex-direction: row;
+            padding: 2px;
+            margin:5px;
+            width: 45%;
+            height: 40px;;
+        }
+
+        #detailbox
+        {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        #detailbox div
+        {
+            height: 20px;
+            font:bolder;
+        }
+        .DBS
+        {
+            display: flex;
+            flex-direction: row;
+            padding:10px;
+            width: 100%;
+            height: 100px;
+        }
+        #book,#share,#Direct
+        {
+            display: flex;
+            flex-direction: row;
+            margin : 5px;
+            border: 2px rgb(160, 155, 155) solid;
+            background-color: white;
+            height: 40px;
+            width: 90px;
+            border-radius: 25%;
+            align-items: center;
+            justify-content: center;
+            color:rgba(90, 88, 88, 0.918);
+        }
+        #Direct:hover, #Direct:hover > * {
+  background-color : rgb(231, 231, 231);
+  cursor: pointer;
+}
+#share:hover, #share:hover > * {
+  background-color:  rgb(231, 231, 231);
+  cursor: pointer;
+}
+#book:hover, #book:hover > * {
+  background-color:  rgb(231, 231, 231);
+  cursor: pointer;
+}
+
+        
+</style>
