@@ -63,6 +63,40 @@ app.post('/login', async (req, res) => {
 
 
 
+app.post('/getrest', async (req, res) => {
+  
+
+
+  try {
+    const db = client.db("myDatabase");
+    const restcollection = db.collection("rests");
+    demand = req.body['filter'];
+
+    // Find a user with the specified username and password
+
+        const ans = await restcollection.find(demand).toArray();
+
+        console.log("demand is ",demand);
+    if (ans.length === 0) {
+      
+
+      console.log("no data found");
+      res.send({ success: false });
+    } else {
+      console.log("Successful login");
+      console.log("sending ",ans);
+      res.send(ans);
+    }
+  } catch (err) {
+    console.error(err);
+    res.send({ success: false });
+  }
+});
+
+
+
+
+
 app.listen(3001, () => {
   console.log('Server listening on port 3001');
 });

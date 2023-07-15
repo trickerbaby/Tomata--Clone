@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './App.css';
 import Orderonline from './Orderonline';
 import Header from './Header';
@@ -17,20 +17,24 @@ function App() {
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [BrandValue,SetBrandValue] = useState(0);
   const [FilterObj,SetFilter] = useState({});
-
+  
   const toggleLoginForm = () => {
     setShowLoginForm(!showLoginForm);
   };
+
+  useEffect(() => {
+    console.log("me hu appjs wala",FilterObj);
+  }, [FilterObj]);
 
   function handle()
   {
     console.log("pizzas");
     SetBrandValue(1);
   }
-  function filterclick()
+  function filterclick(obj)
   {
-    SetFilter({rate:4});
-    console.log(FilterObj);
+    SetFilter(obj);
+    console.log("filter click wala ",FilterObj);
   }
 
   return (
@@ -41,6 +45,7 @@ function App() {
       <Header onLoginClick={toggleLoginForm} />
       {showLoginForm && <LoginForm onClose={toggleLoginForm} />}
       <Filters FilterClickHandler={filterclick}/>
+
       <Routes>
         <Route path="*" element={<Orderonline typeofcard={FilterObj} />} />
         <Route path="/dominos" element={<Rest />} />
