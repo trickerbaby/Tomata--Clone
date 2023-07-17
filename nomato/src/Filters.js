@@ -4,7 +4,7 @@ import {useState,useEffect} from 'react';
 import './filter.css';
 import { div } from "@tensorflow/tfjs";
 import Filter from './filterbox.js';
-
+ 
 function Filters({FilterClickHandler})
 {
   const [Color,SetColor] = useState('white');
@@ -15,7 +15,8 @@ function Filters({FilterClickHandler})
 
   function makeitdark()
   {
-    SetOverLay(true);
+    console.log("overlay is ",isOverlay);
+    SetOverLay(!isOverlay);
   }
 
   function colorchange()
@@ -36,26 +37,41 @@ function Filters({FilterClickHandler})
     FilterClickHandler(obj);
   }
 
+
   function nonveg(type) {
-    setobj(prevState => {
-      const updatedObj = { ...prevState };
-      if(type === "veg")
-      {
+    const updatedObj = { ...obj };
+    if (type === "veg") {
       updatedObj['cat'] = 'veg';
       console.log("obj for veg is", updatedObj);
-      }
-      else
-      {
-        updatedObj['cat'] = 'nonveg';
+    } else if(type === 'nonveg'){
+      updatedObj['cat'] = 'nonveg';
       console.log("obj for non-veg is", updatedObj);
-      }
-      return updatedObj;
-    });
-    FilterClickHandler(obj);
+    }
+    else if(type === '1'){
+      updatedObj['rate'] = {$gt:1};
+      console.log("obj for non-veg is", updatedObj);
+    }
+    else if(type === '2'){
+      updatedObj['rate'] = {$gt:2};
+      console.log("obj for non-veg is", updatedObj);
+    }
+    else if(type === '3'){
+      updatedObj['rate'] = {$gt:1};
+      console.log("obj for non-veg is", updatedObj);
+    }
+    else if(type === '4'){
+      updatedObj['rate'] = {$gt:1};
+      console.log("obj for non-veg is", updatedObj);
+    }
+    else if(type === '5'){
+      updatedObj['rate'] = {$gt:1};
+      console.log("obj for non-veg is", updatedObj);
+    }
+    FilterClickHandler(updatedObj);
   }
 
 
-   
+
 
   return (
     <>
@@ -63,7 +79,7 @@ function Filters({FilterClickHandler})
         {isOverlay && (
           <>
             <div className="overlay"></div>
-            <Filter setobject = {obj} seter={nonveg}/>
+            <Filter setobject = {obj} seter={nonveg} onof={SetOverLay}/>
           </>
         )}
       </div>

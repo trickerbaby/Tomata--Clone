@@ -50,7 +50,7 @@ function Cards({ choice, filter }) {
             <img src={item.src} alt="card image" />
             <div style={{ display: 'flex', flexDirection: 'row' }}>
               <Link to="/dominos">{item.name}</Link>
-              <div style={{ display: 'block', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4BFF3F', width: '30px', height: '30px' }}>{item.rate}</div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4BFF3F', width: '30px', height: '30px' }}>{item.rate}</div>
             </div>
           </div>
         );
