@@ -32,6 +32,18 @@ function Filterbox({ setobject, seter, onof }) {
         </div>
       );
     }
+
+    if(filtername === "sort")
+    {
+      console.log("sort filter active");
+      return (
+        <>
+          <input type='radio' value={'sort'} onClick={() => handleSetEter('sortA')} />{'increasing popularity'}
+          <input type='radio' value={'sort'} onClick={() => handleSetEter('sortD')} />{'decreasing popularity'}
+        </>
+      );
+    }
+
   };
 
   return (

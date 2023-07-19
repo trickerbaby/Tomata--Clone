@@ -43,31 +43,50 @@ function Filters({FilterClickHandler})
     if (type === "veg") {
       updatedObj['cat'] = 'veg';
       console.log("obj for veg is", updatedObj);
+      FilterClickHandler(updatedObj);
     } else if(type === 'nonveg'){
       updatedObj['cat'] = 'nonveg';
       console.log("obj for non-veg is", updatedObj);
+      FilterClickHandler(updatedObj);
     }
     else if(type === '1'){
       updatedObj['rate'] = {$gt:1};
       console.log("obj for non-veg is", updatedObj);
+      FilterClickHandler(updatedObj);
     }
     else if(type === '2'){
       updatedObj['rate'] = {$gt:2};
       console.log("obj for non-veg is", updatedObj);
+      FilterClickHandler(updatedObj);
     }
     else if(type === '3'){
-      updatedObj['rate'] = {$gt:1};
+      updatedObj['rate'] = {$gt:3};
       console.log("obj for non-veg is", updatedObj);
+      FilterClickHandler(updatedObj);
     }
     else if(type === '4'){
-      updatedObj['rate'] = {$gt:1};
+      updatedObj['rate'] = {$gt:4};
       console.log("obj for non-veg is", updatedObj);
+      FilterClickHandler(updatedObj);
     }
     else if(type === '5'){
-      updatedObj['rate'] = {$gt:1};
+      updatedObj['rate'] = 5;
       console.log("obj for non-veg is", updatedObj);
+      FilterClickHandler(updatedObj);
     }
-    FilterClickHandler(updatedObj);
+    else if(type === 'sortA')
+    {
+      console.log("setting sortA before callomg FCH in filter.js");
+      FilterClickHandler('sortA');
+    }
+    else if(type === 'sortD')
+    {
+      console.log("setting sortD before callomg FCH in filter.js");
+      FilterClickHandler('sortD');
+    }
+    
+    
+    
   }
 
 

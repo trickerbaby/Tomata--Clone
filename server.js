@@ -68,6 +68,7 @@ app.post('/getrest', async (req, res) => {
 
 
   try {
+    console.log("******************");
     const db = client.db("myDatabase");
     const restcollection = db.collection("rests");
     demand = req.body['filter'];

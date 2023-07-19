@@ -8,9 +8,10 @@ import './App.css';
 import {Route, Routes } from "react-router-dom";
 
 
-function Orderonline({bv,handle,typeofcard})
+function Orderonline({bv,handle,typeofcard,sortoption})
 {
-   
+
+    console.log("in orderonline,js ",sortoption);
     return(
         <>
   <h2>Inspiration For your first order</h2>
@@ -19,7 +20,7 @@ function Orderonline({bv,handle,typeofcard})
    <h1>Order Food Online In Dampier Nagar</h1>
    <div className='card-section'>
     <Routes>
-        <Route path="" element={ <Cards choice={0} filter={typeofcard} />} />
+        <Route path="" element={ <Cards choice={0} filter={typeofcard} sortornot = {sortoption} />} />
         <Route path="pizzas" element={ <Cards choice={1} />} />
     </Routes>
     </div>

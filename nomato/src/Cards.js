@@ -3,9 +3,11 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
 
-function Cards({ choice, filter }) {
+function Cards({ choice, filter,sortornot }) {
   const [data, setData] = useState([]);
 
+
+    console.log("sortornot is in card.js ",sortornot);
   useEffect(() => {
     fetchData();
   }, [filter]);
@@ -17,7 +19,14 @@ function Cards({ choice, filter }) {
       })
       .then(response => {
         // Handle the successful response
+        console.log("******got response from server*******")
+        if(sortornot === "asc")
+        {
+          console.log("tried sorting the object array");
+          response.data.sort((a,b)=> a.rate - b.rate);
+        }
         console.log(response.data);
+        
         setData(response.data);
       })
       .catch(error => {
@@ -41,6 +50,16 @@ function Cards({ choice, filter }) {
   ];
 
   const cardData = choice === 0 ? rest : pizzas;
+  if(sortornot === "asc")
+        {
+          console.log("tried sorting the object array");
+          data.sort((a,b)=> a.rate - b.rate);
+        }
+        if(sortornot === "des")
+        {
+          console.log("tried sorting the object array in des");
+          data.sort((a,b)=> b.rate - a.rate);
+        }
 
   return (
     <div className="card-section">
@@ -48,9 +67,9 @@ function Cards({ choice, filter }) {
         return (
           <div className="frame3" key={item._id}>
             <img src={item.src} alt="card image" />
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <div style={{ display: 'flex', flexDirection: 'row'}}>
               <Link to="/dominos">{item.name}</Link>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4BFF3F', width: '30px', height: '30px' }}>{item.rate}</div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4BFF3F', width: '50px', height: '30px' ,float:'right',border:'solid 2px',borderRadius:'40%'}}>{item.rate}</div>
             </div>
           </div>
         );

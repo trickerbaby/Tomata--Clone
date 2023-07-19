@@ -10,13 +10,14 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 
 
-
-
 function App() {
 
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [BrandValue,SetBrandValue] = useState(0);
   const [FilterObj,SetFilter] = useState({});
+  const [dosort,setsort] = useState();
+
+  
   
   const toggleLoginForm = () => {
     setShowLoginForm(!showLoginForm);
@@ -33,7 +34,22 @@ function App() {
   }
   function filterclick(obj)
   {
+    console.log("in app.js filterclick obj == ",obj);
+    if(obj == "sortA")
+    {
+      
+      setsort('asc');
+    }
+    else if(obj === "sortD")
+    {
+      
+      setsort('des');
+    }
+    else
+    {
+
     SetFilter(obj);
+    }
     console.log("filter click wala ",FilterObj);
   }
 
@@ -47,7 +63,7 @@ function App() {
       <Filters FilterClickHandler={filterclick}/>
 
       <Routes>
-        <Route path="*" element={<Orderonline typeofcard={FilterObj} />} />
+        <Route path="*" element={<Orderonline typeofcard={FilterObj} sortoption = {dosort}/>} />
         <Route path="/dominos" element={<Rest />} />
       </Routes>
     </div>
