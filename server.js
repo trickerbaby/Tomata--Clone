@@ -64,36 +64,37 @@ app.post('/login', async (req, res) => {
 
 
 app.post('/getrest', async (req, res) => {
-  
-
-
   try {
     console.log("******************");
     const db = client.db("myDatabase");
     const restcollection = db.collection("rests");
     demand = req.body['filter'];
 
-    // Find a user with the specified username and password
-
+    // Simulate a delay of 2 seconds before fetching and sending the response
+    setTimeout(async () => {
+      try {
+        // Find data with the specified demand
         const ans = await restcollection.find(demand).toArray();
 
-        console.log("demand is ",demand);
-    if (ans.length === 0) {
-      
-
-      console.log("no data found");
-      res.send({ success: false });
-    } else {
-      console.log("Successful login");
-      console.log("sending ",ans);
-      res.send(ans);
-    }
+        console.log("demand is ", demand);
+        if (ans.length === 0) {
+          console.log("no data found");
+          res.send({ success: false });
+        } else {
+          console.log("Successful login");
+          console.log("sending ", ans);
+          res.send(ans);
+        }
+      } catch (err) {
+        console.error(err);
+        res.send({ success: false });
+      }
+    }, 2000); // Change 2000 to the desired delay time in milliseconds
   } catch (err) {
     console.error(err);
     res.send({ success: false });
   }
 });
-
 
 
 

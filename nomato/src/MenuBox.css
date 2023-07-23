@@ -1,0 +1,53 @@
+.outerbox {
+    display: flex;
+  }
+  
+  .category-section {
+    width: 150px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    background-color: #f7f7f7;
+  }
+  
+  .category-card {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .FoodLister {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100vh;
+  }
+  
+  /* Add some additional styling to make the layout more visually appealing */
+  h1 {
+    margin: 0;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Apply styles for FoodCard */
+  .imageholder {
+    position: relative;
+    margin-right: 2rem;
+    margin-bottom: 0px;
+    flex-shrink: 0;
+  }
+  
+  .desc {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+  }
+  
+  .ingred {
+    margin: 0.5rem 0px;
+    font-size: 1.4rem;
+    color: rgb(79, 79, 79);
+    max-width: 75%;
+  }
+  

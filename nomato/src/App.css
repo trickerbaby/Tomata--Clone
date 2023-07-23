@@ -211,3 +211,27 @@ header
     display: flex;
     flex-direction: row;
   }
+
+  .loadingCircleStyle
+  {
+    z-index: 2;
+    width: 50px;
+    height : 50px;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid red;
+    animation: spin 1s linear infinite;
+    position : fixed;
+    top: 50%;
+    left : 50%;
+    
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); /* Starting position */
+    }
+    100% {
+      transform: rotate(360deg); /* Ending position after one full rotation (360 degrees) */
+    }
+  }

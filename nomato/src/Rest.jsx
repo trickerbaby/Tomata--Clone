@@ -1,5 +1,8 @@
 import React from "react";
+import Restmenu from "./restmenu";
+import { Routes,Route } from "react-router-dom";
 import './Rest.css';
+import MenuBox from "./MenuBox";
 
 function Rest()
 {
@@ -94,6 +97,14 @@ function Rest()
       <div>. Share</div>
     </div>
   </div>
+  <Restmenu />    
+
+<Routes>
+
+<Route path="showmenu" element={<MenuBox />} />
+<Route path="reviews" element={<h1>REVIEWS DISPLAYED</h1>} />
+</Routes>
+
 </>
 
     );

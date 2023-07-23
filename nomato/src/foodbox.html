@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fixed Left Section - Scrollable Right Section</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-section {
+      width: 150px;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+      background-color: #f7f7f7;
+      /* Add any other styles for the left-section as needed */
+    }
+
+    .clickable-div {
+      padding: 8px;
+      cursor: pointer;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .right-section {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto; /* Enable vertical scroll for the right-section */
+      height: 100vh; /* Set a fixed height to make the right-section scrollable within the viewport */
+    }
+
+    /* Add some additional styling to make the layout more visually appealing */
+    h1 {
+      margin: 0;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .food-card {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <h1>Left Section (Fixed)</h1>
+      <div class="clickable-div">Recommended</div>
+      <div class="clickable-div">Popular</div>
+      <div class="clickable-div">Today Special</div>
+      <!-- Add more clickable divs as needed -->
+    </div>
+    <div class="right-section">
+      <div class="food-card">Food Card 1</div>
+      <div class="food-card">Food Card 2</div>
+      <div class="food-card">Food Card 3</div>
+      <div class="food-card">Food Card 1</div>
+      <div class="food-card">Food Card 2</div>
+      <div class="food-card">Food Card 3</div>
+      <div class="food-card">Food Card 1</div>
+      <div class="food-card">Food Card 2</div>
+      <div class="food-card">Food Card 3</div>
+      <div class="food-card">Food Card 1</div>
+      <div class="food-card">Food Card 2</div>
+      <div class="food-card">Food Card 3</div>
+      <div class="food-card">Food Card 1</div>
+      <div class="food-card">Food Card 2</div>
+      <div class="food-card">Food Card 3</div>
+      <div class="food-card">Food Card 1</div>
+      <div class="food-card">Food Card 2</div>
+      <div class="food-card">Food Card 3</div>
+      <div class="food-card">Food Card 1</div>
+      <div class="food-card">Food Card 2</div>
+      <div class="food-card">Food Card 3</div>
+      <!-- Add more food cards as needed -->
+    </div>
+  </div>
+</body>
+</html>

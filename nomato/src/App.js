@@ -63,8 +63,8 @@ function App() {
       <Filters FilterClickHandler={filterclick}/>
 
       <Routes>
-        <Route path="*" element={<Orderonline typeofcard={FilterObj} sortoption = {dosort}/>} />
-        <Route path="/dominos" element={<Rest />} />
+        <Route path="/orderonline" element={<Orderonline typeofcard={FilterObj} sortoption = {dosort}/>} />
+        <Route path="/dominos/*" element={<Rest />} />
       </Routes>
     </div>
     </BrowserRouter>
