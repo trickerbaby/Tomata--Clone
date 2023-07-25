@@ -11,10 +11,16 @@ function Header({ onLoginClick }) {
             src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"
             alt="Zomato"
           />
-          <div className="searchbar">
-            <div className="searchbarp1">Mathura</div>
-            <div className="searchbarp2">Search For Restaurants</div>
-          </div>
+          <div className="InputContainer">
+        <input
+    placeholder="Search.."
+    id="input"
+    className="input"
+    name="text"
+    type="text"
+     />
+      </div>
+
           <Navend onLoginClick={onLoginClick}/>
         </nav>
       </header>

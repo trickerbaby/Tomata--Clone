@@ -11,6 +11,10 @@ function Cards({ choice, filter, sortornot }) {
     fetchData();
   }, [filter]);
 
+  useEffect(() => {
+    fetchData();
+  }, [sortornot]);
+
   const fetchData = async () => {
     setIsLoading(true);
 
@@ -22,7 +26,8 @@ function Cards({ choice, filter, sortornot }) {
       console.log("******got response from server*******");
       let material = response.data;
 
-      if (sortornot === "asc") {
+      // Check if the response data is an array before sorting
+      if (Array.isArray(material) && sortornot === "asc") {
         console.log("tried sorting the object array");
         material.sort((a, b) => a.rate - b.rate);
       }
@@ -44,9 +49,9 @@ function Cards({ choice, filter, sortornot }) {
     border: '5px solid rgba(0, 0, 0, 0.1)',
     borderTop: '5px solid red',
     animation: 'spin 1s linear infinite',
-    position : 'absolute',
+    position: 'absolute',
     top: '50%',
-    left : '50%'
+    left: '50%'
   };
 
   return (
@@ -56,17 +61,21 @@ function Cards({ choice, filter, sortornot }) {
         <div style={loadingCircleStyle}></div>
       ) : (
         <div className="card-section">
-          {data.map(function (item) {
-            return (
-              <div className="frame3" key={item._id}>
-                <img src={item.src} alt="card image" />
-            <div style={{ display: 'flex', flexDirection: 'row'}}>
-              <Link to="/dominos">{item.name}</Link>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4BFF3F', width: '50px', height: '30px' ,float:'right',border:'solid 2px',borderRadius:'40%'}}>{item.rate}</div>
-            </div>
-              </div>
-            );
-          })}
+          {Array.isArray(data) && data.length > 0 ? (
+            data.map(function (item) {
+              return (
+                <div className="frame3" key={item._id}>
+                  <img src={item.src} alt="card image" />
+                  <div style={{ display: 'flex', flexDirection: 'row' }}>
+                    <Link to="/dominos">{item.name}</Link>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4BFF3F', width: '50px', height: '30px', float: 'right', border: 'solid 2px', borderRadius: '40%' }}>{item.rate}</div>
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <div>No data available</div>
+          )}
         </div>
       )}
     </div>

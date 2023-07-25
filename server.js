@@ -69,6 +69,7 @@ app.post('/getrest', async (req, res) => {
     const db = client.db("myDatabase");
     const restcollection = db.collection("rests");
     demand = req.body['filter'];
+    console.log("demand is ",demand);
 
     // Simulate a delay of 2 seconds before fetching and sending the response
     setTimeout(async () => {

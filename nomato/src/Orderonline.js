@@ -19,10 +19,7 @@ function Orderonline({bv,handle,typeofcard,sortoption})
  <Brands />
    <h1>Order Food Online In Dampier Nagar</h1>
    <div className='card-section'>
-    <Routes>
-        <Route path="" element={ <Cards choice={0} filter={typeofcard} sortornot = {sortoption} />} />
-        <Route path="pizzas" element={ <Cards choice={1} />} />
-    </Routes>
+       <Cards choice={0} filter={typeofcard} sortornot = {sortoption} />
     </div>
 </>
     );

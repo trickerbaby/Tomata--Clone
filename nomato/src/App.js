@@ -7,6 +7,7 @@ import LoginForm from './LoginForm';
 import Filters from './Filters';
 import Rest from './Rest';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './Home';
 
 
 
@@ -15,7 +16,7 @@ function App() {
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [BrandValue,SetBrandValue] = useState(0);
   const [FilterObj,SetFilter] = useState({});
-  const [dosort,setsort] = useState();
+  const [dosort,setsort] = useState('');
 
   
   
@@ -26,6 +27,9 @@ function App() {
   useEffect(() => {
     console.log("me hu appjs wala",FilterObj);
   }, [FilterObj]);
+  useEffect(() => {
+    console.log("me hu appjs wala sort wala",dosort);
+  }, [dosort]);
 
   function handle()
   {
@@ -39,11 +43,16 @@ function App() {
     {
       
       setsort('asc');
+      console.log("setsort('asc') called value = ",dosort);
+      SetFilter(FilterObj);
     }
     else if(obj === "sortD")
     {
       
       setsort('des');
+      console.log("setsort('des') called value = ",dosort);
+      
+      SetFilter(FilterObj);
     }
     else
     {
@@ -58,13 +67,21 @@ function App() {
 
     <div className={`app ${showLoginForm ? 'dark-overlay' : ''}`}>
 
-      <Header onLoginClick={toggleLoginForm} />
-      {showLoginForm && <LoginForm onClose={toggleLoginForm} />}
-      <Filters FilterClickHandler={filterclick}/>
+      
 
       <Routes>
-        <Route path="/orderonline" element={<Orderonline typeofcard={FilterObj} sortoption = {dosort}/>} />
-        <Route path="/dominos/*" element={<Rest />} />
+      <Route path="/" element={<Home />} />
+
+        <Route path="/orderonline" element={<> <Header onLoginClick={toggleLoginForm} />
+              {showLoginForm && <LoginForm onClose={toggleLoginForm} />}
+               <Filters FilterClickHandler={filterclick}/>
+                <Orderonline typeofcard={FilterObj} sortoption = {dosort}/></>} />
+
+
+        <Route path="/dominos/*" element={<><Header onLoginClick={toggleLoginForm} />
+              {showLoginForm && <LoginForm onClose={toggleLoginForm} />}
+           <Rest /></>} />
+
       </Routes>
     </div>
     </BrowserRouter>
