@@ -15,7 +15,7 @@ function Orderonline({bv,handle,typeofcard,sortoption})
     return(
         <>
   <h2>Inspiration For your first order</h2>
-  <Foryou fun={handle} />
+  <Foryou/>
  <Brands />
    <h1>Order Food Online In Dampier Nagar</h1>
    <div className='card-section'>

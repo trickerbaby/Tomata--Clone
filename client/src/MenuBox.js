@@ -4,6 +4,7 @@ import './MenuBox.css';
 import SearchBar from "./SearchBar";
 import {useState} from 'react';
 
+
 function MenuBox() {
 
     const [searchText, setSearchText] = useState('');
@@ -16,7 +17,7 @@ function MenuBox() {
   const data = [{title:'Fiery jalapeno and peprica',src:'https://b.zmtcdn.com/data/dish_photos/e4e/825cf2e2e5851112830ac5beb5f1fe4e.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*',prize:'149',des:'A super spicy veg pizza'},
               {title:'Peppy Paneer Pizza',src:'https://b.zmtcdn.com/data/dish_photos/97c/81fbe5f6e8576cc7bdae699c3900197c.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*',prize:'215',des:'A very good paneer pizza loaded with paneer cubes'},
               {title:'Veggy paradise Pizza',src:'https://b.zmtcdn.com/data/dish_photos/131/d256f07dc0da10e511f6442ee0886131.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*',prize:'315',des:'A veggy pizza filles with Vegetables like capsicum, onions,Black Pappers , Olives etc'}]
-
+  
 
               const filteredData = data.filter((item) => {
                 // Convert both the name and description to lowercase for case-insensitive search
@@ -44,6 +45,10 @@ function MenuBox() {
         
         <section className="FoodLister">
         <SearchBar onSearchChange={handleSearchChange}/>
+         <div className="promobox">
+      <div className="sc-1a03l6b-0 lkqupg">Flat ₹100 OFF</div>
+      <div className="sc-1a03l6b-1 kvnZBD">use code FLATOFF</div>
+    </div>
           {
             
           filteredData.length>0? (filteredData.map((pizza)=>{

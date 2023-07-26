@@ -31,7 +31,7 @@ function Filters({FilterClickHandler})
     {
     SetColor('white');
     SetTextColor('rgb(156, 156, 156)');
-    
+  
     }
 
     FilterClickHandler(obj);

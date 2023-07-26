@@ -1,0 +1,92 @@
+.food-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+  }
+
+  .food-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    margin: 5px 7px 0;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .restaurant-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .restaurant-title-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .restaurant-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .rating-box {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .rating {
+    font-size: 0.8rem;
+    color: #ffffff;
+    background-color: #4caf50;
+    border-radius: 3px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .star-icon {
+    width: 10px;
+    height: 10px;
+    fill: #ffffff;
+    margin-right: 3px;
+  }
+
+  .keywords {
+    font-size: 0.8rem;
+    color: #777777;
+    margin-top: 8px;
+    flex-grow: 1;
+  }
+
+  /* The new element */
+  .custom-element {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .custom-image {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .custom-text {
+    font-size: 0.7rem;
+    color: #777777;
+    margin: 0;
+  }
