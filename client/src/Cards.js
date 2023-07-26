@@ -19,7 +19,7 @@ function Cards({ choice, filter, sortornot }) {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3001/getrest', {
+      const response = await axios.post('https://tomatobackend.onrender.com//getrest', {
         filter: filter,
       });
 
