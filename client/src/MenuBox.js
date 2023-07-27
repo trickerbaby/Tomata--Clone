@@ -45,10 +45,7 @@ function MenuBox() {
         
         <section className="FoodLister">
         <SearchBar onSearchChange={handleSearchChange}/>
-         <div className="promobox">
-      <div className="sc-1a03l6b-0 lkqupg">Flat ₹100 OFF</div>
-      <div className="sc-1a03l6b-1 kvnZBD">use code FLATOFF</div>
-    </div>
+        
           {
             
           filteredData.length>0? (filteredData.map((pizza)=>{

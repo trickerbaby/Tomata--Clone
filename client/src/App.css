@@ -184,6 +184,18 @@ header
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as desired */
     z-index: 1;
   }
+
+  .name2{
+    font-family: 'Carter One', cursive;
+    background-color: transparent;
+    color: rgb(255, 0, 0);
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
   
   .login-form {
     position: fixed;
