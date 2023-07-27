@@ -22,7 +22,7 @@ function Foryou({fun})
           width="170px"
         />
         <div style={{ color: 'red', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-  <Link to="/pizzas"><h4>{item.name}</h4></Link>
+  <h4 onClick={()=>{alert('These categories i would have made to work but that would be too much unnecessary data collection ')}} >{item.name}</h4>
 </div>
 
       </div>);

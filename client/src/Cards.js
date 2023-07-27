@@ -19,7 +19,7 @@ function Cards({ choice, filter, sortornot }) {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('https://tomatobackend.onrender.com//getrest', {
+      const response = await axios.post('https://tomatobackend.onrender.com/getrest', {
         filter: filter,
       });
 
@@ -65,12 +65,14 @@ function Cards({ choice, filter, sortornot }) {
             data.map(function (item) {
               return (
                 <div className="frame3" key={item._id}>
-                  <img src={item.src} alt="card image" />
-                  <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <Link to="/dominos">{item.name}</Link>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#4BFF3F', width: '50px', height: '30px', float: 'right', border: 'solid 2px', borderRadius: '40%' }}>{item.rate}</div>
-                  </div>
+                <img src={item.src} alt="card image" />
+                <div className="content">
+                  <Link to="/dominos" className="restaurant-name">
+                    {item.name}
+                  </Link>
+                  <div className="rating">{item.rate}</div>
                 </div>
+              </div>
               );
             })
           ) : (

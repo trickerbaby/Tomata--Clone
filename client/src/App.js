@@ -13,16 +13,13 @@ import Home from './Home';
 
 function App() {
 
-  const [showLoginForm, setShowLoginForm] = useState(false);
   const [BrandValue,SetBrandValue] = useState(0);
   const [FilterObj,SetFilter] = useState({});
   const [dosort,setsort] = useState('');
 
   
   
-  const toggleLoginForm = () => {
-    setShowLoginForm(!showLoginForm);
-  };
+ 
 
   useEffect(() => {
     console.log("me hu appjs wala",FilterObj);
@@ -65,21 +62,21 @@ function App() {
   return (
     <BrowserRouter>
 
-    <div className={`app ${showLoginForm ? 'dark-overlay' : ''}`}>
+    <div className={`app`}>
 
       
 
       <Routes>
       <Route path="/" element={<Home />} />
 
-        <Route path="/orderonline" element={<> <Header onLoginClick={toggleLoginForm} />
-              {showLoginForm && <LoginForm onClose={toggleLoginForm} />}
+        <Route path="/orderonline" element={<> <Header  />
+              
                <Filters FilterClickHandler={filterclick}/>
                 <Orderonline typeofcard={FilterObj} sortoption = {dosort}/></>} />
 
 
-        <Route path="/dominos/*" element={<><Header onLoginClick={toggleLoginForm} />
-              {showLoginForm && <LoginForm onClose={toggleLoginForm} />}
+        <Route path="/dominos/*" element={<><Header  />
+             
            <Rest /></>} />
 
       </Routes>

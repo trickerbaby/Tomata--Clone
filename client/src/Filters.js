@@ -106,7 +106,7 @@ function Filters({FilterClickHandler})
     <div onClick={makeitdark} className="filt" fill="#9C9C9C" width="18" height="18">Filters</div>
     
     <div onClick={()=>{ obj['rate'] = {$gt:4};colorchange();} } className="filt" fill="#9C9C9C" width="18" height="18" style={{backgroundColor:Color,color:TextColor}}>Ratings 4.0+</div>
-    <div onClick={()=>{nonveg();colorchange();}} className="filt" fill="#9C9C9C" width="18" height="18">Non Veg</div>
+    <div onClick={()=>{alert("does not work yet!");}} className="filt" fill="#9C9C9C" width="18" height="18">Non Veg</div>
     
     <h3></h3>
   </section>
