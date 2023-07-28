@@ -31,7 +31,7 @@ function FoodCard({Key,ImgSource,name,rate}) {
                     <div className="sc-1q7bklc-2 pxJGx">
                       <i className="sc-rbbb40-1 iFnyeo" color="#FFFFFF">
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
+                      xmlns="http://www.w3.org/2000/svg"
                           fill="#FFFFFF"
                           width="0.8rem"
                           height="0.8rem"

@@ -22,7 +22,9 @@ function Rest()
     <div className="bgc1">..</div>
     <div className="bgc2">
       <div id="lowerbg">..</div>
-      <div id="upperbg">..</div>
+      <div id="upperbg"> <div class="overlay-text">
+      <a href="#restmenu">view gallary</a>
+  </div></div>
     </div>
   </div>
   <div className="lowergrid">
@@ -64,7 +66,7 @@ function Rest()
       </section>
     </div>
   </div>
-  <div>
+  <div style={{margin:'50x'}}>
     <h3>Pizza, Italian, Pasta, Fast Food, Desserts</h3>
     <h3 style={{ color: "rgb(138, 133, 133)" }}>Mathura Locality, Mathura</h3>
   </div>

@@ -1,92 +1,59 @@
-.food-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #d9d9d9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
-    height: 400px;
-    margin: 10px;
-  }
+/* RestCard.css */
 
-  .food-image {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-    margin: 5px 7px 0;
-    border-radius: 8px 8px 0 0;
-  }
+/* Main container */
+.sc-bnoQSP.bOwXEI {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e74c3c; /* Red border for the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+}
 
-  .restaurant-info {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
+/* Restaurant name */
+.sc-bnoQSP.bOwXEI .sc-iunyMi.ebClxe .sc-ggjMlp.dBSBAF .sc-1hp8d8a-0.sc-bjbPDc.gPenjS {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e74c3c; /* Red color for the restaurant name */
+}
 
-  .restaurant-title-rating {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+/* Rating background */
+.sc-bnoQSP.bOwXEI .sc-iunyMi.ebClxe .sc-coJghx.geEgZi .sc-1q7bklc-1.cILgox {
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: #f39c12; /* Orange color for the rating background */
+  border-radius: 3px;
+  padding: 4px 8px;
+}
 
-  .restaurant-name {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
-  }
+/* Restaurant keywords */
+.sc-bnoQSP.bOwXEI .sc-iunyMi.ebClxe .sc-eUqAvv.ldndH .sc-1hez2tp-0.sc-ZxTAX.kXcPIC {
+  font-size: 0.8rem;
+  color: #777777;
+}
 
-  .rating-box {
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-  }
+/* Price information */
+.sc-bnoQSP.bOwXEI .sc-iunyMi.ebClxe .sc-eUqAvv.ldndH .sc-1hez2tp-0.sc-ZxTAX.fMtKjK {
+  font-size: 0.8rem;
+  color: #777777;
+}
 
-  .rating {
-    font-size: 0.8rem;
-    color: #ffffff;
-    background-color: #4caf50;
-    border-radius: 3px;
-    padding: 4px 8px;
-    display: flex;
-    align-items: center;
-  }
+/* Opening time */
+.sc-bnoQSP.bOwXEI .sc-iunyMi.ebClxe .sc-hIjJCg.gmLXgu .sc-1hez2tp-0.sc-iYscQK.kruwyz {
+  color: #ab000d; /* Red color for the opening time */
+}
 
-  .star-icon {
-    width: 10px;
-    height: 10px;
-    fill: #ffffff;
-    margin-right: 3px;
-  }
+/* Custom element background */
+.sc-bnoQSP.bOwXEI .sc-byuwlG.rRONu .sc-hnfMjv.iZBToL .sc-s1isp7-1.fRhCDy.sc-dgEPJF.bQEgSQ {
+  background-color: #f9f9f9; /* Light gray background for the custom element */
+}
 
-  .keywords {
-    font-size: 0.8rem;
-    color: #777777;
-    margin-top: 8px;
-    flex-grow: 1;
-  }
-
-  /* The new element */
-  .custom-element {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #d9d9d9;
-    border-radius: 0 0 8px 8px;
-  }
-
-  .custom-image {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-    margin-right: 10px;
-  }
-
-  .custom-text {
-    font-size: 0.7rem;
-    color: #777777;
-    margin: 0;
-  }
+/* Restaurant partner information */
+.sc-bnoQSP.bOwXEI .sc-byuwlG.rRONu .sc-hnfMjv.iZBToL .sc-cCzqYu.gNTSIg .sc-1hez2tp-0.sc-cCDHgp.kTgWNO {
+  font-size: 0.7rem;
+  color: #777777;
+}

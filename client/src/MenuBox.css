@@ -1,53 +1,91 @@
+/* MenuBox.css */
+
+/* Main container */
 .outerbox {
-    display: flex;
-  }
-  
-  .category-section {
-    width: 150px;
-    padding: 10px;
-    border-right: 1px solid #ccc;
-    background-color: #f7f7f7;
-  }
-  
-  .category-card {
-    padding: 8px;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .FoodLister {
-    flex-grow: 1;
-    padding: 10px;
-    overflow-y: auto;
-    height: 100vh;
-  }
-  
-  /* Add some additional styling to make the layout more visually appealing */
-  h1 {
-    margin: 0;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  /* Apply styles for FoodCard */
-  .imageholder {
-    position: relative;
-    margin-right: 2rem;
-    margin-bottom: 0px;
-    flex-shrink: 0;
-  }
-  
-  .desc {
-    display: flex;
-    flex-direction: column;
-    max-width: 75%;
-  }
-  
-  .ingred {
-    margin: 0.5rem 0px;
-    font-size: 1.4rem;
-    color: rgb(79, 79, 79);
-    max-width: 75%;
-  }
-  
+  display: flex;
+}
+
+/* Category section */
+.category-section {
+  width: 150px;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  background-color: #f9f9f9; /* Light gray background for the category section */
+}
+
+/* Category card */
+.category-card {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  color: #e74c3c; /* Red color for the category card text */
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category-card:hover {
+  background-color: #e74c3c; /* Red background on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* FoodLister section */
+.FoodLister {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* Additional styling for the "NO DATA" text */
+h1 {
+  margin: 0;
+  padding: 10px;
+  background-color: #e74c3c; /* Red background for the "NO DATA" text */
+  color: #fff; /* White color for the "NO DATA" text */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Apply styles for FoodCard */
+.imageholder {
+  position: relative;
+  margin-right: 2rem;
+  margin-bottom: 0px;
+  flex-shrink: 0;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+}
+
+.ingred {
+  margin: 0.5rem 0px;
+  font-size: 1.2rem;
+  color: #e74c3c; /* Red color for the ingredient text */
+}
+
+/* Styling for FoodCard title and price */
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333; /* Dark text color for the title */
+}
+
+.price {
+  font-size: 1rem;
+  color: #e67e22; /* Orange color for the price */
+}
+
+a {
+  color: #e74c3c; /* Red color for the link text */
+  text-decoration: none; /* Remove the underline */
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #000000; /* Slightly darker red color on hover */
+}

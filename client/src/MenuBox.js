@@ -36,7 +36,7 @@ function MenuBox() {
       <div className="outerbox">
         <section className="category-section">
           <div className="category-card" >
-            <a href="#today">Recommended</a>
+            <a href="#today">Today's Exclusive Dishes</a>
           </div>
           <div className="category-card">
             Popular
