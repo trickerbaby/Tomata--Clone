@@ -4,18 +4,30 @@ html,body
 
 }
 
-.yourfavdiv
-{
-    background-color: rgb(248, 248, 248);
+.yourfavdiv {
+  background-color: rgb(248, 248, 248);
 }
-.foryou
-{
-  width: 100%; /* Subtract twice the padding value (30px) from the total viewport width */
-  margin-left: 10px; /* Compensate for the negative width */
-  margin-right: -30px; /* Compensate for the negative width */
-    display: flex;
-    flex-direction: row;
+
+.foryou {
+  width: 100%;
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
 }
+
+.containforyou {
+  width: 1300px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.containforyou::-webkit-scrollbar {
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  display: none;
+}
+
 .topbrands
 {
   width: 100%; /* Subtract twice the padding value (30px) from the total viewport width */
